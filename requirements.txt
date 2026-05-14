@@ -1,0 +1,5 @@
+torch>=2.0
+fair-esm>=2.0.0
+biotite>=0.39
+numpy>=1.23
+tqdm>=4.64

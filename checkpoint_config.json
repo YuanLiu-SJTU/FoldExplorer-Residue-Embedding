@@ -1,0 +1,16 @@
+{
+  "checkpoint": "weights/checkpoint.pt",
+  "state_key": "encoder_q",
+  "model": {
+    "seq_dim": 1280,
+    "struc_dim": 512,
+    "hidden_dim": 256,
+    "n_layers": 2,
+    "n_heads": 8,
+    "dropout": 0.1
+  },
+  "checkpoint_info": {
+    "epoch": 100,
+    "embedding_dim": 256
+  }
+}
