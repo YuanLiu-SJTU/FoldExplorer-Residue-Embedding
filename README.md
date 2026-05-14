@@ -28,7 +28,7 @@ The first run may download the ESM2 and ESM-IF model weights through
 The FoldExplorer residue embedding model weights are not included in this
 repository.
 
-Please download the pretrained checkpoint from: [MODEL_WEIGHT_LINK]. After downloading, place the checkpoint at:
+Please download the pretrained checkpoint from: [Download checkpoint.pt](http://www.csbio.sjtu.edu.cn/bioinf/FoldExplorer/ResidueBasedEmbedding/checkpoint.pt). After downloading, place the checkpoint at:
 ```text
 weights/checkpoint.pt
 ```
