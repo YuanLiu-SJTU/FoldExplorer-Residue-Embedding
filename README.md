@@ -36,6 +36,7 @@ After downloading, place the checkpoint at:
 
 ```text
 weights/checkpoint.pt
+```
 
 ## Usage
 
