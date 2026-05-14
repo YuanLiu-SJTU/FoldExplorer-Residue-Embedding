@@ -1,17 +1,16 @@
-# FoldExplorer Inference
+# FoldExplorer Residue Embedding
 
-FoldExplorer Inference extracts residue-level FoldExplorer embeddings directly
-from a folder of protein structure files.
+We retrained a residue-level representation model following the original
+FoldExplorer training strategy and datasets.
 
-For each structure file, the pipeline runs:
+Given a folder of protein structure files, the inference pipeline extracts
+residue-level embeddings by integrating both structural and sequence information.
 
-1. ESM-IF last-layer residue embedding from the 3D structure;
-2. ESM2 last-layer residue embedding from the sequence extracted from that
-   structure;
-3. FoldExplorer fusion to produce the final residue-level embedding.
+For each structure file, the pipeline performs:
 
-Only the final FoldExplorer embeddings are saved. ESM2 and ESM-IF intermediate
-embeddings are kept in memory for the current shard and discarded.
+1. ESM-IF residue embedding extraction from the 3D structure;
+2. ESM2 residue embedding extraction from the corresponding amino acid sequence;
+3. FoldExplorer-style feature fusion to generate the final residue-level representation.
 
 ## Installation
 
@@ -23,6 +22,20 @@ pip install -r requirements.txt
 
 The first run may download the ESM2 and ESM-IF model weights through
 `fair-esm`. A CUDA GPU is recommended.
+
+## Model Weights
+
+The FoldExplorer residue embedding model weights are not included in this
+repository.
+
+Please download the pretrained checkpoint from:
+
+[MODEL_WEIGHT_LINK]
+
+After downloading, place the checkpoint at:
+
+```text
+weights/checkpoint.pt
 
 ## Usage
 
